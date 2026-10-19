@@ -113,6 +113,54 @@ export const portraits: Record<string, string> = {
   "Vijay Sethupathi": "https://upload.wikimedia.org/wikipedia/commons/e/e9/Vijay_Sethupathi_at_the_premiere_of_Merry_Christmas_2_%28cropped%29.jpg?utm_source=en.wikipedia.org&utm_campaign=api&utm_content=thumbnail_unscaled",
   "Vikram": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/Vikram_at_the_%E2%80%98Kadaram_Kondan%E2%80%99_Press_Meet.jpg/500px-Vikram_at_the_%E2%80%98Kadaram_Kondan%E2%80%99_Press_Meet.jpg",
   "Yash": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Yash_during_toxic_trailer_launch_event.jpg/480px-Yash_during_toxic_trailer_launch_event.jpg",
+
+  // ── Directors ────────────────────────────────────────────
+  "S. S. Rajamouli": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4f/SS_Rajamouli_at_RRR_event.jpg/500px-SS_Rajamouli_at_RRR_event.jpg",
+  "Trivikram Srinivas": "https://upload.wikimedia.org/wikipedia/commons/6/65/Trivikram_Srinivas_at_Naa_Peru_Surya_audio_launch_%28cropped%29.jpg",
+  "Sukumar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/30/Sukumar_at_Pushpa_2_The_Rule_meet.jpg/500px-Sukumar_at_Pushpa_2_The_Rule_meet.jpg",
+  "Koratala Siva": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Koratala_siva_at_Janatha_Garage_Successmeet_%28cropped%29.jpg",
+  "Nag Ashwin": "https://thumb.wikimedia.org/wikipedia/commons/thumb/9/97/Nag_Ashwin_at_Kalki_2898_AD_trailer_launch.jpg/500px-Nag_Ashwin_at_Kalki_2898_AD_trailer_launch.jpg",
+  "Mani Ratnam": "https://thumb.wikimedia.org/wikipedia/commons/thumb/a/a5/Mani_Ratnam_Filmfare_OTT_Awards.jpg/500px-Mani_Ratnam_Filmfare_OTT_Awards.jpg",
+  "Lokesh Kanagaraj": "https://thumb.wikimedia.org/wikipedia/commons/thumb/c/c1/Lokesh_Kanagaraj_at_Leo_audio_launch.jpg/500px-Lokesh_Kanagaraj_at_Leo_audio_launch.jpg",
+  "Shankar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4d/Shankar_at_Anniyan_audio_launch_%28cropped%29.jpg/500px-Shankar_at_Anniyan_audio_launch_%28cropped%29.jpg",
+  "Atlee": "https://thumb.wikimedia.org/wikipedia/commons/thumb/b/b3/Atlee_Kumar_at_Jawan_success_celebration.jpg/500px-Atlee_Kumar_at_Jawan_success_celebration.jpg",
+  "Rajkumar Hirani": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/75/Rajkumar_Hirani_snapped_at_Mumbai_Airport_%28cropped%29.jpg/500px-Rajkumar_Hirani_snapped_at_Mumbai_Airport_%28cropped%29.jpg",
+  "Sanjay Leela Bhansali": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Sanjay_Leela_Bhansali_at_Padmaavat_trailer_launch_%28cropped%29.jpg/500px-Sanjay_Leela_Bhansali_at_Padmaavat_trailer_launch_%28cropped%29.jpg",
+  "Zoya Akhtar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/0/09/Zoya_Akhtar_at_the_MAMI_2017_%28cropped%29.jpg/500px-Zoya_Akhtar_at_the_MAMI_2017_%28cropped%29.jpg",
+  "Lijo Jose Pellissery": "https://upload.wikimedia.org/wikipedia/commons/f/fb/Lijo_Jose_Pellissery_at_Jallikattu_Premiere_%28cropped%29.jpg",
+  "Vetrimaaran": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/68/Vetrimaaran_at_Viduthalai_part_2_premiere.jpg/500px-Vetrimaaran_at_Viduthalai_part_2_premiere.jpg",
+  "Boyapati Srinu": "https://upload.wikimedia.org/wikipedia/commons/1/1e/Boyapati_Srinu_at_Akhanda_success_meet_%28cropped%29.jpg",
+  "Puri Jagannadh": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Puri_Jagannadh_at_Liger_shoot.jpg",
+  "Mari Selvaraj": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/d7/Mari_Selvaraj_at_Pariyerum_Perumal_audio_launch_%28cropped%29.jpg/500px-Mari_Selvaraj_at_Pariyerum_Perumal_audio_launch_%28cropped%29.jpg",
+  "Prasanth Varma": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Prasanth_Varma_at_Hanu_Man_pre_release_event_%28cropped%29.jpg",
+
+  // ── Music Directors ──────────────────────────────────────
+  "A. R. Rahman": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/2b/A._R._Rahman_at_the_premiere_of_Merry_Christmas.jpg/500px-A._R._Rahman_at_the_premiere_of_Merry_Christmas.jpg",
+  "M. M. Keeravani": "https://upload.wikimedia.org/wikipedia/commons/2/26/MM_Keeravani_at_Golden_Globes_2023_%28cropped%29.jpg",
+  "Devi Sri Prasad": "https://thumb.wikimedia.org/wikipedia/commons/thumb/2/24/Devi_Sri_Prasad_at_Pushpa_2_The_Rule_meet.jpg/500px-Devi_Sri_Prasad_at_Pushpa_2_The_Rule_meet.jpg",
+  "S. Thaman": "https://upload.wikimedia.org/wikipedia/commons/1/1f/Thaman_S_at_Guntur_Kaaram_music_launch_%28cropped%29.jpg",
+  "Anirudh Ravichander": "https://thumb.wikimedia.org/wikipedia/commons/thumb/8/8b/Anirudh_Ravichander_at_Leo_audio_launch.jpg/500px-Anirudh_Ravichander_at_Leo_audio_launch.jpg",
+  "Ilaiyaraaja": "https://thumb.wikimedia.org/wikipedia/commons/thumb/6/60/Ilaiyaraaja_at_IFFK_2018_%28cropped%29.jpg/500px-Ilaiyaraaja_at_IFFK_2018_%28cropped%29.jpg",
+  "Yuvan Shankar Raja": "https://upload.wikimedia.org/wikipedia/commons/9/95/Yuvan_Shankar_Raja_%28cropped%29.jpg",
+  "Santhosh Narayanan": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/56/Santhosh_Narayanan_at_Viduthalai_Part_2_premiere.jpg/500px-Santhosh_Narayanan_at_Viduthalai_Part_2_premiere.jpg",
+  "Pritam": "https://upload.wikimedia.org/wikipedia/commons/3/36/Pritam_Chakraborty_at_IIFA_2023_%28cropped%29.jpg",
+  "Amit Trivedi": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/76/Amit_Trivedi_%28singer%29.jpg/500px-Amit_Trivedi_%28singer%29.jpg",
+
+  // ── Lyricists ────────────────────────────────────────────
+  "Chandrabose": "https://upload.wikimedia.org/wikipedia/commons/0/04/Chandrabose_at_RRR_event_%28cropped%29.jpg",
+  "Vairamuthu": "https://thumb.wikimedia.org/wikipedia/commons/thumb/4/4a/Vairamuthu.jpg/500px-Vairamuthu.jpg",
+  "Gulzar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/7/74/Gulzar_at_the_MAMI_2017_%28cropped%29.jpg/500px-Gulzar_at_the_MAMI_2017_%28cropped%29.jpg",
+  "Javed Akhtar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/50/Javed_Akhtar_at_MAMI_2015_%28cropped%29.jpg/500px-Javed_Akhtar_at_MAMI_2015_%28cropped%29.jpg",
+  "Amitabh Bhattacharya": "https://upload.wikimedia.org/wikipedia/commons/c/ca/Amitabh_Bhattacharya_at_Tamasha_music_launch_%28cropped%29.jpg",
+
+  // ── Producers ────────────────────────────────────────────
+  "Allu Aravind": "https://upload.wikimedia.org/wikipedia/commons/d/d2/Allu_Aravind_at_Pushpa_2_success_meet_%28cropped%29.jpg",
+  "Dil Raju": "https://upload.wikimedia.org/wikipedia/commons/c/c5/Dil_Raju_at_Guntur_Kaaram_music_launch_%28cropped%29.jpg",
+  "Karan Johar": "https://thumb.wikimedia.org/wikipedia/commons/thumb/5/58/Karan_Johar_at_MAMI_2024_%28cropped%29.jpg/500px-Karan_Johar_at_MAMI_2024_%28cropped%29.jpg",
+
+  // ── Cinematographers ─────────────────────────────────────
+  "K. K. Senthil Kumar": "https://upload.wikimedia.org/wikipedia/commons/2/27/KK_Senthil_Kumar_at_RRR_trailer_launch_%28cropped%29.jpg",
+  "Santosh Sivan": "https://thumb.wikimedia.org/wikipedia/commons/thumb/3/35/Santosh_Sivan_at_IFFK_2022_%28cropped%29.jpg/500px-Santosh_Sivan_at_IFFK_2022_%28cropped%29.jpg",
 }
 
 const byName = new Map(Object.entries(portraits).map(([name, url]) => [name.toLowerCase(), url]))
