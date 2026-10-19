@@ -1,14 +1,15 @@
+'use client'
+
 import { useEffect, useState } from 'react'
-import { Link, useParams } from 'react-router-dom'
-import { firebaseReady } from '../../firebaseConfig.ts'
-import { CastList } from './CastList.tsx'
-import { fetchCast, type Selections } from './castStore.ts'
-import { useCast } from './useCast.ts'
+import Link from 'next/link'
+import { firebaseReady } from '@/lib/firebaseConfig'
+import { CastList } from './CastList'
+import { fetchCast, type Selections } from './castStore'
+import { useCast } from './useCast'
 
 const CAST_ID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i
 
-export function SharedCastScreen() {
-  const { castId = '' } = useParams()
+export function SharedCastScreen({ castId }: { castId: string }) {
   const { visitorId, selections: mine } = useCast()
   const isMine = castId === visitorId
   const [theirs, setTheirs] = useState<Selections | null>(null)
@@ -48,7 +49,7 @@ export function SharedCastScreen() {
       {failed && <p className="empty">Could not load this cast.</p>}
       {missing && <p className="empty">This cast is still empty.</p>}
       {selections && <CastList selections={selections} />}
-      <Link className="share" to={isMine ? '/mahabharatham' : '/'}>
+      <Link className="share" href={isMine ? '/mahabharatham' : '/'}>
         {isMine ? 'Edit your cast' : 'Build your own'}
       </Link>
     </div>

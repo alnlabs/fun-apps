@@ -8,8 +8,8 @@ import {
   type DocumentData,
   type Unsubscribe,
 } from 'firebase/firestore'
-import { getDb } from '../../firebase.ts'
-import { isRoleId, roleIds, roles, type Role } from './roles.ts'
+import { getDb } from '@/lib/firebase'
+import { isRoleId, roleIds, roles, type Role } from './roles'
 
 export type Selection = { name: string }
 export type Selections = Record<string, Selection>
@@ -36,6 +36,7 @@ export function nameKey(name: string): string {
 }
 
 export function loadLocalSelections(): Selections {
+  if (typeof window === 'undefined') return {}
   try {
     const raw = localStorage.getItem(LOCAL_KEY)
     if (!raw) return {}
@@ -47,6 +48,7 @@ export function loadLocalSelections(): Selections {
 }
 
 export function saveLocalSelections(selections: Selections) {
+  if (typeof window === 'undefined') return
   localStorage.setItem(LOCAL_KEY, JSON.stringify({ selections }))
 }
 
@@ -175,9 +177,10 @@ export async function saveRole(visitorId: string, roleId: string, rawName: strin
     tx.set(tally, { total, choices, top: topChoices(choices) })
     tx.set(ref, {
       selections,
-      createdAt: castSnap.exists() && castSnap.data()?.createdAt
-        ? castSnap.data()?.createdAt
-        : serverTimestamp(),
+      createdAt:
+        castSnap.exists() && castSnap.data()?.createdAt
+          ? castSnap.data()?.createdAt
+          : serverTimestamp(),
       updatedAt: serverTimestamp(),
     })
   })

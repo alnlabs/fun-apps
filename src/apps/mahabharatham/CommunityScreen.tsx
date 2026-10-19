@@ -1,7 +1,9 @@
-import { firebaseReady } from '../../firebaseConfig.ts'
-import { FirebaseNote } from './FirebaseNote.tsx'
-import { useCast } from './useCast.ts'
-import { rolesInGroup, visibleGroups } from './roles.ts'
+'use client'
+
+import { firebaseReady } from '@/lib/firebaseConfig'
+import { FirebaseNote } from './FirebaseNote'
+import { useCast } from './useCast'
+import { rolesInGroup, visibleGroups } from './roles'
 
 export function CommunityScreen() {
   const { tallies, extraCrewIds } = useCast()

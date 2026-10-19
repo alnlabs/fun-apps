@@ -1,13 +1,16 @@
+'use client'
+
 import { useState, type ReactNode } from 'react'
-import { displayName } from './castStore.ts'
-import { isRoleId, popularCrewIds, roles } from './roles.ts'
-import { useOwnCast, useVisitorId } from './useOwnCast.ts'
-import { useTallies } from './useTallies.ts'
-import { CastContext, type CastContextValue } from './useCast.ts'
+import { displayName } from './castStore'
+import { isRoleId, popularCrewIds, roles } from './roles'
+import { useOwnCast, useVisitorId } from './useOwnCast'
+import { useTallies } from './useTallies'
+import { CastContext, type CastContextValue } from './useCast'
 
 const EXTRA_CREW_KEY = 'fun-projects-mahabharatham-extra-crew'
 
 function loadAddedCrew(): string[] {
+  if (typeof window === 'undefined') return []
   try {
     const raw = JSON.parse(localStorage.getItem(EXTRA_CREW_KEY) ?? '[]') as unknown
     if (!Array.isArray(raw)) return []

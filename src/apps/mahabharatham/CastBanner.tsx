@@ -1,7 +1,9 @@
-import { displayName, type Selections } from './castStore.ts'
-import { EmptySeat } from './EmptySeat.tsx'
-import { Portrait } from './Portrait.tsx'
-import { rolesInGroup, visibleGroups, type Role } from './roles.ts'
+'use client'
+
+import { displayName, type Selections } from './castStore'
+import { EmptySeat } from './EmptySeat'
+import { Portrait } from './Portrait'
+import { rolesInGroup, visibleGroups, type Role } from './roles'
 
 type CastBannerProps = {
   selections: Selections

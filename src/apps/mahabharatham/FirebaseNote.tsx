@@ -1,4 +1,6 @@
-import { firebaseReady } from '../../firebaseConfig.ts'
+'use client'
+
+import { firebaseReady } from '@/lib/firebaseConfig'
 
 export function FirebaseNote() {
   if (firebaseReady) return null

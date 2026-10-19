@@ -1,5 +1,7 @@
+'use client'
+
 import { useEffect, useState } from 'react'
-import { watchTallies, type Tally } from './castStore.ts'
+import { watchTallies, type Tally } from './castStore'
 
 export function useTallies() {
   const [tallies, setTallies] = useState<Record<string, Tally>>({})

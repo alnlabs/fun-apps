@@ -1,10 +1,12 @@
+'use client'
+
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
-import { firebaseReady } from '../../firebaseConfig.ts'
-import { CastList } from './CastList.tsx'
-import { filledCount } from './castStore.ts'
-import { useCast } from './useCast.ts'
-import { trackRoleIds } from './roles.ts'
+import Link from 'next/link'
+import { firebaseReady } from '@/lib/firebaseConfig'
+import { CastList } from './CastList'
+import { filledCount } from './castStore'
+import { useCast } from './useCast'
+import { trackRoleIds } from './roles'
 
 export function MyCastScreen() {
   const { visitorId, selections, extraCrewIds } = useCast()
@@ -12,7 +14,9 @@ export function MyCastScreen() {
   const [shareError, setShareError] = useState<string | null>(null)
   const tracked = trackRoleIds(extraCrewIds)
   const filled = filledCount(selections, tracked)
-  const shareUrl = `${window.location.origin}/mahabharatham/c/${visitorId}`
+  const shareUrl = typeof window !== 'undefined'
+    ? `${window.location.origin}/mahabharatham/c/${visitorId}`
+    : ''
 
   async function share() {
     setCopied(false)
@@ -49,7 +53,7 @@ export function MyCastScreen() {
           : 'The link only opens on this phone until Firebase is connected.'}
       </p>
       {filled === 0 && (
-        <Link className="text-link" to="/mahabharatham">
+        <Link className="text-link" href="/mahabharatham">
           Pick the first name
         </Link>
       )}

@@ -1,8 +1,10 @@
+'use client'
+
 import { useEffect, useId, useMemo, useState } from 'react'
-import { allActors, allCrew, candidatesFor } from './candidates.ts'
-import { displayName, nameKey, type Selections, type TallyChoice } from './castStore.ts'
-import { Portrait } from './Portrait.tsx'
-import { roles, type Role } from './roles.ts'
+import { allActors, allCrew, candidatesFor } from './candidates'
+import { displayName, nameKey, type Selections, type TallyChoice } from './castStore'
+import { Portrait } from './Portrait'
+import { roles, type Role } from './roles'
 
 type CastModalProps = {
   role: Role

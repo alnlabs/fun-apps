@@ -1,6 +1,8 @@
+'use client'
+
 import { useCallback, useEffect, useRef, useState } from 'react'
-import { firebaseReady } from '../../firebaseConfig.ts'
-import { getVisitorId } from '../../visitor.ts'
+import { firebaseReady } from '@/lib/firebaseConfig'
+import { getVisitorId } from '@/lib/visitor'
 import {
   displayName,
   fetchCast,
@@ -9,8 +11,8 @@ import {
   saveLocalSelections,
   saveRole,
   type Selections,
-} from './castStore.ts'
-import { roleIds } from './roles.ts'
+} from './castStore'
+import { roleIds } from './roles'
 
 export function useVisitorId() {
   const [visitorId] = useState(getVisitorId)
@@ -22,7 +24,7 @@ export function useOwnCast(visitorId: string) {
   const [saving, setSaving] = useState<Record<string, boolean>>({})
   const [error, setError] = useState<string | null>(null)
   const dirty = useRef(new Set<string>())
-  const timers = useRef<Record<string, number>>({})
+  const timers = useRef<Record<string, ReturnType<typeof setTimeout>>>({})
   const selectionsRef = useRef(selections)
   useEffect(() => {
     selectionsRef.current = selections
@@ -31,7 +33,7 @@ export function useOwnCast(visitorId: string) {
   useEffect(() => {
     const pending = timers.current
     return () => {
-      for (const timer of Object.values(pending)) window.clearTimeout(timer)
+      for (const timer of Object.values(pending)) clearTimeout(timer)
     }
   }, [])
 
@@ -93,8 +95,8 @@ export function useOwnCast(visitorId: string) {
       })
 
       const existing = timers.current[roleId]
-      if (existing) window.clearTimeout(existing)
-      timers.current[roleId] = window.setTimeout(() => {
+      if (existing) clearTimeout(existing)
+      timers.current[roleId] = setTimeout(() => {
         if (!firebaseReady) return
         setSaving((current) => ({ ...current, [roleId]: true }))
         void saveRole(visitorId, roleId, typed)

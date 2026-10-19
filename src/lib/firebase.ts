@@ -1,6 +1,6 @@
 import { initializeApp } from 'firebase/app'
 import { getFirestore, type Firestore } from 'firebase/firestore'
-import { firebaseConfig, firebaseReady } from './firebaseConfig.ts'
+import { firebaseConfig, firebaseReady } from './firebaseConfig'
 
 let db: Firestore | null = null
 

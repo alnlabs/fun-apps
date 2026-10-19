@@ -1,6 +1,8 @@
-import { displayName, type Selections } from './castStore.ts'
-import { CastBanner } from './CastBanner.tsx'
-import { popularCrewIds, roles } from './roles.ts'
+'use client'
+
+import { displayName, type Selections } from './castStore'
+import { CastBanner } from './CastBanner'
+import { popularCrewIds, roles } from './roles'
 
 export function CastList({
   selections,

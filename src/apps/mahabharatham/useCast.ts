@@ -1,5 +1,7 @@
+'use client'
+
 import { createContext, useContext } from 'react'
-import type { Selections, Tally } from './castStore.ts'
+import type { Selections, Tally } from './castStore'
 
 export type CastContextValue = {
   visitorId: string

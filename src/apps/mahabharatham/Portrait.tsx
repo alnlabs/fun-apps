@@ -1,5 +1,7 @@
+'use client'
+
 import { useState } from 'react'
-import { portraitFor } from './portraits.ts'
+import { portraitFor } from './portraits'
 
 type PortraitProps = {
   name: string

@@ -1,7 +1,9 @@
-import type { Role } from './roles.ts'
-import { displayName } from './castStore.ts'
-import { EmptySeat } from './EmptySeat.tsx'
-import { Portrait } from './Portrait.tsx'
+'use client'
+
+import type { Role } from './roles'
+import { displayName } from './castStore'
+import { EmptySeat } from './EmptySeat'
+import { Portrait } from './Portrait'
 
 type RoleCardProps = {
   role: Role
