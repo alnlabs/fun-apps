@@ -4,22 +4,28 @@ import type { Metadata } from 'next'
 import { FaArrowRight, FaLightbulb, FaShareAlt } from 'react-icons/fa'
 import { TbAsterisk } from 'react-icons/tb'
 import { BsPeopleFill } from 'react-icons/bs'
+import { funApps } from '@/apps/registry'
 
 export const metadata: Metadata = {
   title: 'Fun Projects',
-  description: 'Creative experiments, interactive concepts, and projects made for the joy of exploring what\'s possible.',
+  description:
+    "Creative experiments, interactive concepts, and projects made for the joy of exploring what's possible.",
   alternates: { canonical: '/' },
   openGraph: { title: 'Fun Projects', description: 'A playground for curiosity.', url: '/', type: 'website' },
   twitter: { card: 'summary_large_image', title: 'Fun Projects', description: 'A playground for curiosity.' },
 }
 
 export default function HomePage() {
+  const featured = funApps.find((a) => a.status === 'live')
+
   return (
     <div className="home">
       {/* ── Navbar ── */}
       <nav className="home-nav">
         <Link href="/" className="home-logo">
-          <span className="home-logo-icon" aria-hidden="true"><TbAsterisk /></span>
+          <span className="home-logo-icon" aria-hidden="true">
+            <TbAsterisk />
+          </span>
           <span className="home-logo-name">Fun Projects</span>
         </Link>
         <div className="home-nav-links">
@@ -33,8 +39,12 @@ export default function HomePage() {
       <section className="home-hero" aria-label="Hero">
         <div className="home-hero-content">
           <h1 className="home-hero-title">A playground<br />for curiosity.</h1>
-          <p className="home-hero-sub">Creative experiments, interactive concepts,<br />and projects made for the joy of exploring<br />what&apos;s possible.</p>
-          <Link href="/mahabharatham" className="home-hero-cta">
+          <p className="home-hero-sub">
+            Creative experiments, interactive concepts,<br />
+            and projects made for the joy of exploring<br />
+            what&apos;s possible.
+          </p>
+          <Link href={featured?.path ?? '/'} className="home-hero-cta">
             Discover the current project <FaArrowRight aria-hidden="true" />
           </Link>
         </div>
@@ -44,31 +54,37 @@ export default function HomePage() {
       </section>
 
       {/* ── Featured Project ── */}
-      <section className="home-section">
-        <p className="home-eyebrow">Featured Project</p>
-        <h2 className="home-section-title">One epic. Your choices.</h2>
-        <p className="home-section-sub">If the Mahabharatham were made into a movie today,<br />which actors would you choose for its legendary characters?</p>
+      {featured && (
+        <section className="home-section">
+          <p className="home-eyebrow">Featured Project</p>
+          <h2 className="home-section-title">{featured.sectionTitle}</h2>
+          <p className="home-section-sub">{featured.sectionSub}</p>
 
-        <div className="home-featured-card">
-          <div className="home-featured-img-wrap">
-            <Image src="/mahabharatham-card.jpg" alt="Warrior at sunset" fill className="home-featured-img" />
+          <div className="home-featured-card">
+            <div className="home-featured-img-wrap">
+              <Image src="/mahabharatham-card.jpg" alt="" fill className="home-featured-img" />
+            </div>
+            <div className="home-featured-body">
+              <p className="home-featured-badge">
+                <BsPeopleFill aria-hidden="true" /> {featured.badge}
+              </p>
+              <h3 className="home-featured-name">{featured.title}</h3>
+              <p className="home-featured-blurb">{featured.cardBlurb}</p>
+              <Link href={featured.path} className="home-featured-cta">
+                {featured.cta} <FaArrowRight aria-hidden="true" />
+              </Link>
+            </div>
           </div>
-          <div className="home-featured-body">
-            <p className="home-featured-badge"><BsPeopleFill aria-hidden="true" /> Fan Project</p>
-            <h3 className="home-featured-name">Mahabharatham:<br />Dream Cast</h3>
-            <p className="home-featured-blurb">Pick actors for your favourite characters and create your own dream cast.</p>
-            <Link href="/mahabharatham" className="home-featured-cta">
-              Create your dream cast <FaArrowRight aria-hidden="true" />
-            </Link>
-          </div>
-        </div>
-      </section>
+        </section>
+      )}
 
       {/* ── Be Part Of It ── */}
       <section className="home-section home-section-border">
         <p className="home-eyebrow">Be Part Of It</p>
         <h2 className="home-section-title">Your idea could be next.</h2>
-        <p className="home-section-sub">Have a thought worth exploring? Suggest something new, or share this project with someone who would enjoy it.</p>
+        <p className="home-section-sub">
+          Have a thought worth exploring? Suggest something new, or share this project with someone who would enjoy it.
+        </p>
 
         <div className="home-actions">
           <a href="mailto:aln@example.com" className="home-action-card">

@@ -38,7 +38,7 @@ function EpicShell({ children }: { children: React.ReactNode }) {
             Fun Projects
           </Link>
           <div className="epic-title-block">
-            <h1 className="epic-title">Mahabharatham</h1>
+            <h1 className="epic-title">Mahabharatham: Dream Cast</h1>
             <p className="epic-subtitle">Choose who plays each role and build your dream cast.</p>
           </div>
         </div>

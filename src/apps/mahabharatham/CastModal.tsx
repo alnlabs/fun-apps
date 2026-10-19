@@ -134,11 +134,11 @@ export function CastModal({ role, value, suggestions, selections, onSelect, onCl
           </button>
         </div>
         <label className="modal-search">
-          <span className="sr-only">Search actors</span>
+          <span className="sr-only">{crewRole ? 'Search names' : 'Search actors'}</span>
           <input
             autoFocus
             value={query}
-            placeholder="Search actors"
+            placeholder={crewRole ? 'Search names' : 'Search actors'}
             onChange={(event) => setQuery(event.target.value)}
           />
         </label>
